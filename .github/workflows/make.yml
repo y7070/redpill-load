@@ -6,7 +6,7 @@ on:
       pat-address:
         description: 'Pat file URL'
         required: true
-        default: 'https://cndl.synology.cn/download/DSM/release/7.0.1/42218/DSM_RS3617xs+_42218.pat'
+        default: 'https://cndl.synology.cn/download/DSM/release/7.0.1/42218/DSM_DS3622xs_42218.pat'
       toolchain:
         description: 'DSM toolchain URL for repack zImage'
         required: true
