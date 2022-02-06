@@ -10,7 +10,7 @@ on:
       toolchain:
         description: 'DSM toolchain URL for repack zImage'
         required: true
-        default: 'https://phoenixnap.dl.sourceforge.net/project/dsgpl/Tool%20Chain/DSM%207.0.0%20Tool%20Chains/Intel%20x86%20Linux%204.4.180%20%28Broadwell%29/broadwell-gcc750_glibc226_x86_64-GPL.txz'
+        default: 'https://downloads.sourceforge.net/project/dsgpl/Tool%20Chain/DSM%207.0.0%20Tool%20Chains/Intel%20x86%20Linux%204.4.180%20%28Broadwellnk%29/broadwellnk-gcc750_glibc226_x86_64-GPL.txz?ts=gAAAAABiAB1M7Ei9Vo4Wb38pNclr4TjyiEjgkL651257_VEeK4GiPTWFALmgFVwvVZXxKoczwsLE7lMjEYvJweiCb_mAvo7z9g%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fdsgpl%2Ffiles%2FTool%2520Chain%2FDSM%25207.0.0%2520Tool%2520Chains%2FIntel%2520x86%2520Linux%25204.4.180%2520%2528Broadwellnk%2529%2Fbroadwellnk-gcc750_glibc226_x86_64-GPL.txz%2Fdownload'
       linux-src:
         description: 'Linux kernel source URL for repack zImage'
         required: true
