@@ -47,7 +47,8 @@ jobs:
           cd synoesp
           output1=$(xz -dc < rd.gz 2>/dev/null)
           echo $output1
-          output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1)
+          output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1 || echo "abc")
+          echo $output2
           mkdir extract && cd extract
           cp ../usr/lib/libcurl.so.4 ../usr/lib/libmbedcrypto.so.5 ../usr/lib/libmbedtls.so.13 ../usr/lib/libmbedx509.so.1 ../usr/lib/libmsgpackc.so.2 ../usr/lib/libsodium.so ../usr/lib/libsynocodesign-ng-virtual-junior-wins.so.7 ../usr/syno/bin/scemd ./
           ln -s scemd syno_extract_system_patch
