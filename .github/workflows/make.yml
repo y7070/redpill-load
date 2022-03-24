@@ -45,6 +45,7 @@ jobs:
 
           tar -C./synoesp/ -xf oldpat.tar.gz rd.gz
           cd synoesp
+          ls
           output1=$(xz -dc < rd.gz 2>/dev/null)
           echo $output1
           output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1 || echo "abc")
