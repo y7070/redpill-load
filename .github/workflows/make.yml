@@ -45,9 +45,13 @@ jobs:
 
           tar -C./synoesp/ -xf oldpat.tar.gz rd.gz
           cd synoesp
-          ls
+          ls -al
           output1=$(xz -dc < rd.gz 2>/dev/null)
           echo $output1
+          xz -dc < rd.gz 2>/dev/null
+          echo 'here'
+          
+          echo $output1 | cpio -idm
           output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1 || echo "abc")
           echo $output
           mkdir extract && cd extract
