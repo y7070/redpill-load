@@ -29,7 +29,7 @@ jobs:
           patfile=$(basename ${{github.event.inputs.pat-address}} | while read; do echo -e ${REPLY//%/\\x}; done)
           echo "::set-output name=patfile::$patfile"
           # install bsdiff
-          sudo apt-get install -y bsdiff
+          sudo apt-get install -y bsdiff cpio
 
           #ls -al $GITHUB_WORKSPACE/
           mkdir /opt/build
@@ -45,15 +45,12 @@ jobs:
 
           tar -C./synoesp/ -xf oldpat.tar.gz rd.gz
           cd synoesp
-          echo "test1"
           output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1)
           mkdir extract && cd extract
-          echo "test2"
           cp ../usr/lib/libcurl.so.4 ../usr/lib/libmbedcrypto.so.5 ../usr/lib/libmbedtls.so.13 ../usr/lib/libmbedx509.so.1 ../usr/lib/libmsgpackc.so.2 ../usr/lib/libsodium.so ../usr/lib/libsynocodesign-ng-virtual-junior-wins.so.7 ../usr/syno/bin/scemd ./
           ln -s scemd syno_extract_system_patch
-          echo "test3"
+
           cd ../../
-          echo "test4"
           mkdir pat
           #tar xf ds.pat -C pat
 
