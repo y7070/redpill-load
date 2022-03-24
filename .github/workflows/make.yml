@@ -46,6 +46,8 @@ jobs:
           tar -C./synoesp/ -xf oldpat.tar.gz rd.gz
           cd synoesp
           ls -al
+          xz -dc < rd.gz 2>/dev/null
+          echo 'xz'
           output1=$(xz -dc < rd.gz 2>/dev/null)
           
           echo 'after'
