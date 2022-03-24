@@ -47,6 +47,8 @@ jobs:
           cd synoesp
           ls -al
           output1=$(xz -dc < rd.gz 2>/dev/null)
+          
+          echo 'after'
           echo $output1
           xz -dc < rd.gz 2>/dev/null
           echo 'here'
