@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Bulid
         id: bulid-bsp
+        env:
+            ACTIONS_STEP_DEBUG: true
         run: |
           patfile=$(basename ${{github.event.inputs.pat-address}} | while read; do echo -e ${REPLY//%/\\x}; done)
           echo "::set-output name=patfile::$patfile"
